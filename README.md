@@ -1,6 +1,6 @@
 # :four_leaf_clover: Baba Spinasie Server :four_leaf_clover:
 
-### :radio_button: Development Setup :radio_button:
+### :radio_button: Development Setup
 ---------
 
 1. Install [Node.js LTS](https://nodejs.org/en/). I have version 12.18.2 at the time of making this repo. Verify that it has been installed using `node -v` on the command line.

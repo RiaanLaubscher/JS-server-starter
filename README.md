@@ -29,7 +29,7 @@ SELECT * FROM actor;
 
 > Now we need to make sure we can set up the Express server to connect to the database.
 
-17. Run `npm start` in the **baba-spinasie-server** folder to start the server. It should fail at first due to the lack of support for the password hashing on the client side. We can force MySQL workbench to allow the root user to use the mysql native password by running the following query in the Workbench:
+17. Run `npm run start-dev` in the **baba-spinasie-server** folder to start the server. It should fail at first due to the lack of support for the password hashing on the client side. We can force MySQL workbench to allow the root user to use the mysql native password by running the following query in the Workbench:
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'

@@ -16,7 +16,7 @@
 8. Choose a standalone MySQL server since we don't need clusters.
 9. Use the default 'Type and Networking' options for the server.
 10. Use the RECOMMENDED password hashing type. The MySQL driver for the Node.js server does not support this hashing type yet (there is a PR in the pipeline), but we will use a workaround later on.
-11. In the 'Accounts and Roles' tab I chose a password for the Root user: `KoppieKoffie4`. Don't know if this needs to be the same for everyone running the DevSetup though. We connect to the database using the MySQL driver from npm which would require a password when the connection is instantiated. Would probably not make sense to have version control over a file that needs to connect with the database using different passwords, right? See - this is what keeps me up at night!! I need answers for this!
+11. In the 'Accounts and Roles' tab I chose a password for myself. Choose your own password that you will later use an environment variable to connect to the database.
 12. Keep the 'Windows Service' as is.
 13. Click 'Next' and 'Finish' past the MySQL Router Configuration.
 14. On the 'Connect to Server' tab, enter the password so that the server is connected and running. Just click 'Next' and 'Finish' from here on out.

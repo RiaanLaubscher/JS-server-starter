@@ -45,5 +45,3 @@ Check out [this stackoverflow answer](https://stackoverflow.com/questions/500931
 Baby-spinach server listening on port 4000
 Connected to the local MySQL server.
 ```
-
-19. You can confirm that you are up and running by typing in `localhost:/4000/actors` in the browser URL. I also recommend installing the [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) extension for Chrome to view JSON structures in the browser.

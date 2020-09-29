@@ -2,18 +2,12 @@
   "name": "baba-spinasie-server",
   "version": "1.0.0",
   "description": "This repo contains the server side project for the baba-spinasie web-app",
-  "main": "app.ts",
+  "main": "./dist/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "tsnd --respawn app.ts",
-    "migrate": "sequelize-cli db:migrate",
-    "migrate:undo": "sequelize-cli db:migrate:undo",
-    "migrate:undo:all": "sequelize-cli db:migrate:undo:all",
-    "seed:all": "sequelize-cli db:seed:all",
-    "seed:all:undo": "sequelize-cli db:seed:undo:all",
-    "seed:undo": "sequelize-cli db:seed:undo",
-    "db:drop": "sequelize-cli db:drop",
-    "db:create": "sequelize-cli db:create"
+    "start:dist": "nodemon ./dist/app.js",
+    "start:dev": "tsnd --respawn --no-notify ./src/app.ts",
+    "build": "rimraf ./dist && tsc",
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -27,26 +21,43 @@
   },
   "homepage": "https://github.com/RiaanLaubscher/baba-spinasie-server#readme",
   "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "apollo-server-express": "^2.16.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "class-validator": "^0.12.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "graphql-custom-types": "^1.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mysql2": "^2.1.0",
-    "sequelize": "^6.3.3",
-    "sequelize-typescript": "^1.1.0"
+    "module-alias": "^2.2.2",
+    "pg": "^8.3.3",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.0.0-rc.3",
+    "typeorm": "^0.2.26"
   },
   "devDependencies": {
+    "@types/bluebird": "^3.5.32",
     "@types/cors": "^2.8.6",
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.7",
+    "@types/graphql": "^14.5.0",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/node": "^14.0.23",
-    "@types/sequelize": "^4.28.9",
     "@types/validator": "^13.1.0",
-    "module-alias": "^2.2.2",
-    "sequelize-cli": "^6.2.0",
+    "apollo": "^2.30.1",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2",
     "ts-node-dev": "^1.0.0-pre.52",
     "tslint": "^6.1.2",
     "typescript": "^3.9.7"
+  },
+  "_moduleAliases": {
+    "@src": "src",
+    "@entity": "src/entity",
+    "@modules": "src/graphql/modules",
+    "@helpers": "src/helpers"
   }
 }

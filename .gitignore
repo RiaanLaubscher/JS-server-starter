@@ -9,6 +9,7 @@
 # misc
 .vscode
 .env
+ormconfig.json
 
 # logs
 npm-debug.log*

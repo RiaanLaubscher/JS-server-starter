@@ -27,7 +27,7 @@
 8. This should open GraphQLPlayground. Run the following query to make sure a user can be inserted:
    ```
    {
-      user {
+      users {
          userName
       }
    }
